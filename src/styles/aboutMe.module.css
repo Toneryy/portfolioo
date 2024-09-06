@@ -54,33 +54,46 @@
 .gridContainer {
     margin-top: 18px;
     display: grid;
-    grid-template-columns: repeat(2, 333px); /* Две колонки по 333px */
-    grid-auto-rows: 169px; /* Высота строки */
-    gap: 24px 27px; /* 24px вертикальное и 27px горизонтальное расстояние между элементами */
+    grid-template-columns: repeat(2, 333px);
+    grid-auto-rows: 175px;
+    gap: 24px 27px;
+    perspective: 1000px; /* Добавляем перспективу для родителя */
 }
 
 .gridItem {
-    padding: 10px;
+    padding: 18px;
     border-radius: 10px;
     background-color: #f2f2f2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход для трансформации и тени */
+    transform-style: preserve-3d; /* Сохраняем 3D-трансформацию */
 }
 
-.webDevelopment {
-    background-color: #ffe9e5;
+.gridItem:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Увеличиваем тень при наведении */
+    transform: rotateY(15deg) rotateX(10deg); /* Вращаем элемент по осям Y и X при наведении */
 }
 
-.appDevelopment {
-    background-color: #e5f2ff;
-}
-
-.uiuxDesigning {
-    background-color: #e5ecff;
-}
-
+/* Эти классы отвечают за цвет фона и градиентную обводку */
+.webDevelopment,
+.appDevelopment,
+.uiuxDesigning,
 .mentorship {
-    background-color: #d3a39e;
+    background-color: #E1E8EF;
+    border: 1px solid #FF3B3B;
+    border-radius: 10px;
+    transform-style: preserve-3d; /* Сохраняем 3D-трансформацию */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавляем плавные переходы */
 }
+
+.gridItem:hover .webDevelopment,
+.gridItem:hover .appDevelopment,
+.gridItem:hover .uiuxDesigning,
+.gridItem:hover .mentorship {
+    transform: rotateY(15deg) rotateX(10deg); /* Вращение при наведении курсора */
+}
+
+
 
 .gridItem h3 {
     font-weight: 600;

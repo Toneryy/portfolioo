@@ -5,6 +5,7 @@
     height: 700px;
     background: #fff;
     border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
     color: black;
     overflow: visible;
     z-index: 1;  
@@ -39,7 +40,7 @@
 }
 
 .sidemenuSubtitle {
-    margin-top: 4px;
+    margin-top: 2px;
     font-weight: 500;
     color: rgba(11, 9, 9, 0.5);
     line-height: 40px;
@@ -121,7 +122,7 @@
 }
 
 .contactInfo p {
-    margin: 0;
+    margin-top: 4px;
     font-size: 14px;
 }
 
