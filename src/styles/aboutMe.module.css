@@ -1,0 +1,105 @@
+* {
+    color: black;
+}
+
+.aboutMe {
+    float: right;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 820px;
+    height: 700px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.aboutMeContainer {
+    padding: 18px 54px 32px 73px;
+}
+
+.title {
+    display: flex;
+}
+
+.title h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: normal;
+    color: #0B0909;
+}
+
+.line {
+    margin-left: 32px;
+    width: 40%;
+    height: 2px;
+    background: #ED250A;
+    display: none;
+}
+
+.description {
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.skills {
+    margin-top: 26px;
+}
+
+.skillsTitle {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 2.5%;   
+}
+
+.gridContainer {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, 333px); /* Две колонки по 333px */
+    grid-auto-rows: 169px; /* Высота строки */
+    gap: 24px 27px; /* 24px вертикальное и 27px горизонтальное расстояние между элементами */
+}
+
+.gridItem {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.webDevelopment {
+    background-color: #ffe9e5;
+}
+
+.appDevelopment {
+    background-color: #e5f2ff;
+}
+
+.uiuxDesigning {
+    background-color: #e5ecff;
+}
+
+.mentorship {
+    background-color: #ffeacc;
+}
+
+.gridItem h3 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.gridItem p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 2.5%;
+    margin-top: 10px;
+}

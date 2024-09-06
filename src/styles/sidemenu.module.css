@@ -1,0 +1,157 @@
+.sidemenu {
+    margin-top: 10px;
+    position: relative;
+    width: 400px;
+    height: 700px;
+    background: #fff;
+    border-radius: 20px;
+    color: black;
+    overflow: visible;
+    z-index: 1;  
+    float: left;
+}
+
+.sidemenu .faceImage {
+    position: absolute;
+    left: 50%;
+    top: -100px; /* Выступает на 100px над контейнером */
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    transform: translateX(-50%); /* Центровка по горизонтали */
+    z-index: 2;
+}
+
+.sidemenuContainer {
+    padding: 114px 25px 66px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.sidemenuTitle {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 35.5px;
+    font-size: 28px;
+    text-align: center;    
+}
+
+.sidemenuSubtitle {
+    margin-top: 4px;
+    font-weight: 500;
+    color: rgba(11, 9, 9, 0.5);
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.contactContainer {
+    margin-top: 6px;
+    display: flex;
+    gap: 9px;
+    justify-content: center; 
+}
+
+.contactElement {
+    width: 60px;
+    height: 60px;
+    background-color: #E1E8EF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Плавный переход */
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit; /* Наследует цвет */
+}
+
+.contactElement:hover {
+    transform: scale(1.1); /* Эффект увеличения */
+    background-color: #D1D8DF; /* Изменение фона при наведении */
+}
+
+.contactElement img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.informationContent {
+    margin-top: 20px;
+    width: 80%; 
+    height: 50%;
+    padding: 33px 36px; 
+    background: #F2F7FC;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+
+.contactItem {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contactItem:hover {
+    transform: scale(1.05);
+    background-color: #E1E8EF;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contactIcon {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+.contactInfo h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contactInfo p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.separator {
+    border-top: 1px solid #E1E8EF;
+    /* margin: 18px 0; */
+}
+
+.downloadResume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    width: 207px;
+    height: 44px;
+    background: linear-gradient(90deg, #FF5E5E, #FF3B3B);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.downloadResume img {
+    margin-right: 10px;
+}
+
+.downloadResume:hover {
+    background: linear-gradient(90deg, #FF3B3B, #FF5E5E);
+    transform: scale(1.05);
+}
