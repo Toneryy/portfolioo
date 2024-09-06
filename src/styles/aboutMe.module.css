@@ -1,7 +1,3 @@
-* {
-    color: black;
-}
-
 .aboutMe {
     float: right;
     margin-top: 10px;
@@ -49,8 +45,6 @@
 }
 
 .skillsTitle {
-    margin-top: 0;
-    margin-bottom: 0;
     font-size: 32px;
     font-weight: 500;
     line-height: 40px;
@@ -85,7 +79,7 @@
 }
 
 .mentorship {
-    background-color: #ffeacc;
+    background-color: #d3a39e;
 }
 
 .gridItem h3 {

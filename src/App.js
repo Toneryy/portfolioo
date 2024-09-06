@@ -1,7 +1,10 @@
+import './reset.css';
+
 import React from 'react'; 
 import s from './styles/App.module.css';
 import Main from './Components/Main'
 import Header from './Components/Header'
+
 
 function App() {
   return (
