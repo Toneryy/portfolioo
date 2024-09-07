@@ -3,10 +3,10 @@ import s from '../styles/aboutMe.module.css';
 
 const AboutMe = () => {
     return (
-        <div className={s.aboutMe}>
+        <section className={s.aboutMe}>
             <div className={s.aboutMeContainer}>
                 <div className={s.title}>
-                    <h2>Обо мне</h2>
+                    <h1>Обо мне</h1>
                     <div className={s.line}></div>
                 </div>
                 <div className={s.description}>
@@ -39,7 +39,7 @@ const AboutMe = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

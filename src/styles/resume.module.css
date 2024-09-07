@@ -1,0 +1,143 @@
+/* Исходные стили, которые вы предоставили */
+.resume {
+    float: right;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 820px;
+    height: 700px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.resumeContainer {
+    padding: 18px 54px 32px 73px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.title h1 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #0B0909;
+    margin: 0;
+}
+
+.line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #FF5E5E;
+    margin-left: 20px;
+}
+
+.resumeSections {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки */
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.section {
+    background-color: #F2F5F9;
+    border: 1px solid rgb(255, 59, 59, .7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавим плавное изменение тени */
+}
+
+.section:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* При наведении увеличим тень */
+    transform: rotateY(10deg) rotateX(5deg); /* 3D трансформация */
+}
+
+.sectionTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FF3B3B;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sectionTitle .icon {
+    margin-right: 10px;
+}
+
+.sectionContent .item {
+    margin-bottom: 20px;
+}
+
+.sectionContent .item:last-child {
+    margin-bottom: 0;
+}
+
+.date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.itemTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.institution {
+    font-size: 16px;
+    color: #666;
+}
+
+.skillsSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки */
+    gap: 40px;
+}
+
+.skills {
+    background-color: #F2F5F9;
+    border: 1px solid rgb(255, 59, 59, .7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавим плавное изменение тени */
+}
+
+.skills:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* При наведении увеличим тень */
+    transform: rotateY(10deg) rotateX(5deg); /* 3D трансформация */
+}
+
+.skillsTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.skillsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skillItem {
+    background-color: #E1E8EF;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d; 
+}
+
+.skillItem:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* При наведении увеличим тень */
+    transform: rotateY(10deg) rotateX(5deg); /* 3D трансформация */
+}

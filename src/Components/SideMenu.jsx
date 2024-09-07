@@ -14,9 +14,11 @@ import emailIcon from "../data/emailIcon.png"
 import locationIcon from "../data/locationIcon.png"
 import downloadIcon from "../data/downloadIcon.png"
 
+import resume from '../data/resume/resume.pdf'
+
 const SideMenu = () => {
     return (
-        <div className={s.sidemenu}>
+        <section className={s.sidemenu}>
             <img src={faceImage} alt="face" className={s.faceImage} />
             <div className={s.sidemenuContainer}>
                 <h2 className={s.sidemenuTitle}>
@@ -47,7 +49,7 @@ const SideMenu = () => {
                             <p>+79952371047</p>
                         </div>
                     </a>
-                    <div class={s.separator}></div>
+                    <div className={s.separator}></div>
                     <a href="mailto:toneryy@ya.ru" className={s.contactItem}>
                         <img src={emailIcon} alt="Email Icon" className={s.contactIcon}/>
                         <div className={s.contactInfo}>
@@ -55,7 +57,7 @@ const SideMenu = () => {
                             <p>toneryy@ya.ru</p>
                         </div>
                     </a>
-                    <div class={s.separator}></div>
+                    <div className={s.separator}></div>
                     <a href="https://www.google.com/maps/place/Санкт-Петербург/" target="_blank" className={s.contactItem}>
                         <img src={locationIcon} alt="Location Icon" className={s.contactIcon}/>
                         <div className={s.contactInfo}>
@@ -63,14 +65,14 @@ const SideMenu = () => {
                             <p>Санкт-Петербург</p>
                         </div>
                     </a>
-                    <div class={s.separator}></div>
-                    <button className={s.downloadResume}>
+                    <div className={s.separator}></div>
+                    <a href={resume} download className={s.downloadResume}>
                         <img src={downloadIcon} alt="Download Icon"/>
                         Скачать резюме
-                    </button>
+                    </a>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

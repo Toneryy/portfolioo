@@ -8,37 +8,30 @@ import s from '../styles/panel.module.css';
 
 const Panel = () => {
     return (
-        <div className={s.panel}>
+        <section className={s.panel}>
             <div className={s.panelContent}>
-                <button className={s.panelElement}>
+                <a href="/home" className={s.panelElement}>
                     <div className={s.panelContainer}>
                         <img src={home} alt="home icon" width="22.5px" height="19.5px"/>
-                        <h4 className={s.panelSubtitle}>Home</h4>
+                        <h4 className={s.panelSubtitle}>Главная</h4>
                     </div>
-                </button>
+                </a>
 
-                <button className={s.panelElement}>
+                <a href="/Resume" className={s.panelElement}>
                     <div className={s.panelContainer}>
                         <img src={resume} alt="resume icon" width="16px" height="20px"/>
-                        <h4 className={s.panelSubtitle}>Resume</h4>
+                        <h4 className={s.panelSubtitle}>Резюме</h4>
                     </div>
-                </button>
+                </a>
 
-                <button className={s.panelElement}>
+                <a href="/portfolio" className={s.panelElement}>
                     <div className={s.panelContainer}>
                         <img src={work} alt="work icon" width="20px" height="19px"/>
-                        <h4 className={s.panelSubtitle}>Work</h4>
+                        <h4 className={s.panelSubtitle}>Портфолио</h4>
                     </div>
-                </button>
-
-                {/* <button className={s.panelElement}>
-                    <div className={s.panelContainer}>
-                        <img src={contact} alt="contact icon" width="20px" height="20px"/>
-                        <h4 className={s.panelSubtitle}>Contact</h4>
-                    </div>
-                </button> */}
+                </a>
             </div>
-        </div>
+        </section>
     );
 };
 

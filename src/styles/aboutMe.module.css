@@ -14,23 +14,23 @@
 
 .title {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-.title h2 {
-    margin-top: 0;
-    margin-bottom: 0;
+.title h1 {
     font-size: 40px;
     font-weight: 500;
-    line-height: normal;
     color: #0B0909;
+    margin: 0;
 }
 
 .line {
-    margin-left: 32px;
-    width: 40%;
+    flex-grow: 1;
     height: 2px;
-    background: #ED250A;
-    display: none;
+    background-color: #FF5E5E;
+    margin-left: 20px;
 }
 
 .description {
@@ -57,7 +57,7 @@
     grid-template-columns: repeat(2, 333px);
     grid-auto-rows: 175px;
     gap: 24px 27px;
-    perspective: 1000px; /* Добавляем перспективу для родителя */
+    perspective: 1000px; 
 }
 
 .gridItem {
@@ -65,13 +65,13 @@
     border-radius: 10px;
     background-color: #f2f2f2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход для трансформации и тени */
-    transform-style: preserve-3d; /* Сохраняем 3D-трансформацию */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d; 
 }
 
 .gridItem:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Увеличиваем тень при наведении */
-    transform: rotateY(15deg) rotateX(10deg); /* Вращаем элемент по осям Y и X при наведении */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+    transform: rotateY(15deg) rotateX(10deg); 
 }
 
 /* Эти классы отвечают за цвет фона и градиентную обводку */
@@ -80,17 +80,17 @@
 .uiuxDesigning,
 .mentorship {
     background-color: #E1E8EF;
-    border: 1px solid #FF3B3B;
+    border: 1px solid rgb(255, 59, 59, .7);
     border-radius: 10px;
-    transform-style: preserve-3d; /* Сохраняем 3D-трансформацию */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавляем плавные переходы */
+    transform-style: preserve-3d; /* 3D-трансформация */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .gridItem:hover .webDevelopment,
 .gridItem:hover .appDevelopment,
 .gridItem:hover .uiuxDesigning,
 .gridItem:hover .mentorship {
-    transform: rotateY(15deg) rotateX(10deg); /* Вращение при наведении курсора */
+    transform: rotateY(15deg) rotateX(10deg); 
 }
 
 
