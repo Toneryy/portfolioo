@@ -18,47 +18,47 @@ const Portfolio = () => {
                 <div className={s.container}>
                     <NavLink to="/1" className={s.gridItem}>
                         <div className={s.imageContainer}>
-                            <img src={first} alt="first example"/>
+                            <img src={first} alt="Smart Bank App"/>
                         </div>
                         <div className={s.itemContent}>
-                            <h3>App Development</h3>
-                            <p>Smart Bank App</p>
+                            <h3>Сайт рок-группы</h3>
+                            <p>Лэндинг</p>
                         </div>
                     </NavLink>
                     
                     <NavLink to="/2" className={s.gridItem}>
                         <div className={s.imageContainer}>
-                            <img src={second} alt="second example"/>
+                            <img src={second} alt="Online Store"/>
                         </div>
                         <div className={s.itemContent}>
-                            <h3>Web Development</h3>
-                            <p>Online Store</p>
+                            <h3>Сайт телеграм-бота</h3>
+                            <p>Многостраничный сайт</p>
                         </div>
                     </NavLink>
 
                     <NavLink to="/3" className={s.gridItem}>
                         <div className={s.imageContainer}>
-                            <img src={third} alt="third example"/>
+                            <img src={third} alt="Adventure Game"/>
                         </div>
                         <div className={s.itemContent}>
-                            <h3>Game Development</h3>
-                            <p>Adventure Game</p>
+                            <h3>Сайт маркетинговой компании</h3>
+                            <p>Лэндинг</p>
                         </div>
                     </NavLink>
                     
                     <NavLink to="/4" className={s.gridItem}>
                         <div className={s.imageContainer}>
-                            <img src={fourth} alt="fourth example"/>
+                            <img src={fourth} alt="Predictive Analytics"/>
                         </div>
                         <div className={s.itemContent}>
-                            <h3>Data Science</h3>
-                            <p>Predictive Analytics</p>
+                            <h3>Сайт для управления бюджетом</h3>
+                            <p>Веб-приложение</p>
                         </div>
                     </NavLink>
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default Portfolio;
