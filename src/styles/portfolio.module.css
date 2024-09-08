@@ -1,0 +1,104 @@
+.portfolio {
+    float: right;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 820px;
+    height: 700px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.portfolioContainer {
+    padding: 18px 54px 32px 73px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.title h1 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #0B0909;
+    margin: 0;
+}
+
+.line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #FF5E5E;
+    margin-left: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку */
+    width: 700px; /* Суммарная ширина контейнера */
+    gap: 20px; /* Отступ между блоками */
+    margin: 0 auto; /* Центрирование контейнера */
+}
+
+.gridItem {
+    flex: 1 1 calc(50% - 20px); /* Каждый блок занимает половину строки минус отступ */
+    background-color: #E1E8EF;
+    padding: 15px;
+    box-sizing: border-box; /* Учитываем паддинги в общей ширине блока */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Переходы для анимации */
+}
+
+.gridItem:hover {
+    transform: scale(1.05); /* Увеличение масштаба блока при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении */
+}
+
+.imageContainer {
+    width: 100%;
+    height: 150px; /* Примерная высота блока с изображением */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Отступ между изображением и текстом */
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Переход для анимации */
+}
+
+.gridItem:hover .imageContainer {
+    transform: scale(1.1); /* Увеличение масштаба изображения при наведении */
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Изображение подстраивается под размер контейнера */
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Переход для анимации */
+}
+
+.gridItem:hover .imageContainer img {
+    transform: scale(1.1); /* Увеличение масштаба изображения при наведении */
+}
+
+.itemContent {
+    text-align: left;
+}
+
+.itemContent h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #FF3B3B;
+    transition: color 0.3s ease, transform 0.3s ease; /* Переходы для анимации */
+}
+
+.itemContent h3:hover {
+    color: #FF5E5E;
+    transform: translateY(-3px); /* Лёгкое поднятие заголовка при наведении */
+}
+
+.itemContent p {
+    font-size: 14px;
+    margin: 5px 0 0;
+    color: #333;
+}

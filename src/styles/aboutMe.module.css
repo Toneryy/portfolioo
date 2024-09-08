@@ -41,7 +41,7 @@
 }
 
 .skills {
-    margin-top: 26px;
+    margin-top: 20px;
 }
 
 .skillsTitle {
@@ -52,7 +52,7 @@
 }
 
 .gridContainer {
-    margin-top: 18px;
+    margin-top: 14px;
     display: grid;
     grid-template-columns: repeat(2, 333px);
     grid-auto-rows: 175px;

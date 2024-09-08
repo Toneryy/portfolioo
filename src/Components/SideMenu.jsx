@@ -1,43 +1,36 @@
 import React from "react";
 
-import s from '../styles/sidemenu.module.css'
+import s from '../styles/sidemenu.module.css';
 
-import faceImage from "../data/faceImage.jpg"
-
-import telegram from "../data/telegram.png"
-import vk from "../data/vk.png"
-import github from "../data/github.png"
-import email from "../data/email.png"
-
-import phoneIcon from "../data/phoneIcon.png"
-import emailIcon from "../data/emailIcon.png"
-import locationIcon from "../data/locationIcon.png"
-import downloadIcon from "../data/downloadIcon.png"
-
-import resume from '../data/resume/resume.pdf'
+import faceImage from "../data/faceImage.jpg";
+import telegram from "../data/telegram.png";
+import vk from "../data/vk.png";
+import github from "../data/github.png";
+import email from "../data/email.png";
+import phoneIcon from "../data/phoneIcon.png";
+import emailIcon from "../data/emailIcon.png";
+import locationIcon from "../data/locationIcon.png";
+import downloadIcon from "../data/downloadIcon.png";
+import resume from '../data/resume/resume.pdf';
 
 const SideMenu = () => {
     return (
         <section className={s.sidemenu}>
             <img src={faceImage} alt="face" className={s.faceImage} />
             <div className={s.sidemenuContainer}>
-                <h2 className={s.sidemenuTitle}>
-                    Мещеряков Даниил
-                </h2>
-                <h3 className={s.sidemenuSubtitle}>
-                    Frontend разработчик
-                </h3>
+                <h2 className={s.sidemenuTitle}>Мещеряков Даниил</h2>
+                <h3 className={s.sidemenuSubtitle}>Frontend разработчик</h3>
                 <div className={s.contactContainer}>
-                    <a href="https://t.me/tonnrryyy" target="_blank" className={s.contactElement}>
+                    <a href="https://t.me/tonnrryyy" className={s.contactElement} target="_blank" rel="noopener noreferrer">
                         <img src={telegram} alt="telegram"/>
                     </a>
-                    <a href="https://vk.com/toneryy" target="_blank" className={s.contactElement}>
+                    <a href="https://vk.com/toneryy" className={s.contactElement} target="_blank" rel="noopener noreferrer">
                         <img src={vk} alt="vk"/>
                     </a>
-                    <a href="https://github.com/Toneryy/" target="_blank" className={s.contactElement}>
+                    <a href="https://github.com/Toneryy/" className={s.contactElement} target="_blank" rel="noopener noreferrer">
                         <img src={github} alt="github"/>
                     </a>
-                    <a href="mailto:toneryy@yandex.ru" target="_blank" className={s.contactElement}>
+                    <a href="mailto:toneryy@yandex.ru" className={s.contactElement} target="_blank" rel="noopener noreferrer">
                         <img src={email} alt="email"/>
                     </a>
                 </div>
@@ -58,7 +51,7 @@ const SideMenu = () => {
                         </div>
                     </a>
                     <div className={s.separator}></div>
-                    <a href="https://www.google.com/maps/place/Санкт-Петербург/" target="_blank" className={s.contactItem}>
+                    <a href="https://www.google.com/maps/place/Санкт-Петербург/" target="_blank" rel="noopener noreferrer" className={s.contactItem}>
                         <img src={locationIcon} alt="Location Icon" className={s.contactIcon}/>
                         <div className={s.contactInfo}>
                             <h4>Локация</h4>
@@ -73,7 +66,7 @@ const SideMenu = () => {
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default SideMenu;
