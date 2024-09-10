@@ -15,11 +15,11 @@
 .sidemenu .faceImage {
     position: absolute;
     left: 50%;
-    top: -100px; /* Выступает на 100px над контейнером */
+    top: -100px;
     width: 200px;
     height: 200px;
     border-radius: 20px;
-    transform: translateX(-50%); /* Центровка по горизонтали */
+    transform: translateX(-50%);
     z-index: 2;
 }
 
@@ -63,14 +63,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Плавный переход */
-    text-decoration: none; /* Убирает подчеркивание */
-    color: inherit; /* Наследует цвет */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+    color: inherit;
 }
 
 .contactElement:hover {
-    transform: scale(1.1); /* Эффект увеличения */
-    background-color: #D1D8DF; /* Изменение фона при наведении */
+    transform: scale(1.1);
+    background-color: #D1D8DF;
 }
 
 .contactElement img {
@@ -78,12 +78,11 @@
     height: 20px;
 }
 
-
 .informationContent {
     margin-top: 20px;
     width: 90%; 
     height: 350px;
-    padding: 33px 36px; 
+    padding: 33px 36px;
     background: #F2F7FC;
     border-radius: 20px;
     display: flex;
@@ -91,13 +90,11 @@
     gap: 17px;
 }
 
-
 .contactItem {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: black;
-
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     border-radius: 10px;
     overflow: hidden;
@@ -129,7 +126,6 @@
 
 .separator {
     border-top: 1px solid #E1E8EF;
-    /* margin: 18px 0; */
 }
 
 .downloadResume {
@@ -156,4 +152,56 @@
 .downloadResume:hover {
     background: linear-gradient(90deg, #FF3B3B, #FF5E5E);
     transform: scale(1.05);
+}
+
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+    .sidemenu {
+        width: 100%;
+        height: auto;
+    }
+
+    .sidemenu .faceImage {
+        width: 150px;
+        height: 150px;
+        top: -75px;
+    }
+
+    .sidemenuContainer {
+        padding: 100px 20px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidemenuTitle {
+        font-size: 24px;
+    }
+
+    .sidemenuSubtitle {
+        font-size: 14px;
+    }
+
+    .informationContent {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidemenuTitle {
+        font-size: 20px;
+    }
+
+    .sidemenuSubtitle {
+        font-size: 12px;
+    }
+
+    .contactElement {
+        width: 50px;
+        height: 50px;
+    }
+
+    .informationContent {
+        padding: 20px;
+        gap: 10px;
+    }
 }

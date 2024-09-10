@@ -110,3 +110,77 @@
     letter-spacing: 2.5%;
     margin-top: 10px;
 }
+@media (max-width: 1024px) {
+    .aboutMe {
+        width: 100%; /* Уменьшенная ширина с учетом отступов */
+    }
+
+    .aboutMeContainer {
+        padding: 18px 15px 32px 15px; /* Измененные отступы */
+    }
+
+    .title h1 {
+        font-size: 32px; /* Уменьшенный размер шрифта */
+    }
+
+    .skillsTitle {
+        font-size: 24px; /* Уменьшенный размер шрифта */
+    }
+
+    .gridContainer {
+        gap: 15px 15px; /* Уменьшенные отступы в сетке */
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutMe {
+        width: 100%; /* Уменьшенная ширина с учетом отступов */
+    }
+
+    .aboutMeContainer {
+        padding: 18px 10px 32px 10px; /* Измененные отступы */
+    }
+
+    .title h1 {
+        font-size: 28px; /* Уменьшенный размер шрифта */
+    }
+
+    .skillsTitle {
+        font-size: 20px; /* Уменьшенный размер шрифта */
+    }
+
+    .gridContainer {
+        grid-template-columns: 1fr; /* Одноколоночная сетка */
+        gap: 10px; /* Уменьшенные отступы в сетке */
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutMe {
+        width: 100%; /* Уменьшенная ширина с учетом отступов */
+    }
+
+    .aboutMeContainer {
+        padding: 18px 5px 32px 5px; /* Измененные отступы */
+    }
+
+    .title h1 {
+        font-size: 24px; /* Уменьшенный размер шрифта */
+    }
+
+    .skillsTitle {
+        font-size: 18px; /* Уменьшенный размер шрифта */
+    }
+
+    .gridContainer {
+        gap: 8px; /* Уменьшенные отступы в сетке */
+    }
+
+    .gridItem {
+        padding: 12px; /* Уменьшенный отступ внутри элемента */
+    }
+
+    .gridItem p {
+        font-size: 11px;
+    }
+}

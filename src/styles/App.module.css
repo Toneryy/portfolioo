@@ -16,3 +16,23 @@ body {
 .main {
     margin-top: 42px;
 }
+
+/* Адаптивные стили */
+
+@media (max-width: 1240px) {
+    .wrapper {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+}

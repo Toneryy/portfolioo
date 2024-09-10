@@ -5,7 +5,6 @@
     border-radius: 20px;
     box-shadow: 0px 0px 4px rgb(0 0 0 / 25%);
     background: #F2F7FC;
-
 }
 
 .panelContent {
@@ -45,4 +44,35 @@
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 12px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+    .panel {
+        width: 300px;
+    }
+
+    .panelElement {
+        width: 70px;
+        height: 70px;
+    }
+
+    .panelSubtitle {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .panel {
+        width: 100%;
+    }
+
+    .panelElement {
+        width: 60px;
+        height: 60px;
+    }
+
+    .panelSubtitle {
+        font-size: 8px;
+    }
 }
