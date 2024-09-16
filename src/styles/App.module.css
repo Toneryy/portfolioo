@@ -4,6 +4,7 @@
 body {
     font-family: "Raleway", sans-serif;
     font-size: 16px;
+    /* background: #1f4075; */
     background: #F2F5F9;
     color: black;
 }
@@ -19,51 +20,33 @@ body {
 
 /* Адаптивные стили */
 
-/* app.module.css */
 @media (min-width: 1024px) and (max-width: 1240px) {
     .wrapper {
         max-width: 90%;
-        padding: 0 15px; /* Сохранение отступов внутри wrapper */
+        padding: 0 15px; /* Сохранение отступов */
     }
 
-    .sidebar {
-        width: 280px; /* Уменьшение ширины боковой панели */
-        margin-bottom: 20px;
+    .sidemenu {
+        width: 300px; /* Немного уменьшаем ширину */
+        margin-right: 20px; /* Отступ справа */
+        float: left; /* Закрепляем слева */
+    }
+
+    .aboutMe {
+        width: calc(100% - 340px); /* Рассчитываем ширину с учетом sidemenu */
+        float: right; /* Закрепляем справа */
+        height: auto; /* Автоматическая высота */
+    }
+
+    .panel {
+        width: 320px; /* Уменьшение ширины панели */
+        margin-left: auto;
+        margin-right: 20px;
+        height: auto; /* Автоматическая высота */
     }
 
     .main {
         margin-top: 30px;
-        padding: 0 20px;
-    }
-
-    .sidemenu {
-        width: 320px; /* Уменьшение ширины SideMenu */
-        height: auto; /* Автоматическая высота для SideMenu */
-        margin-right: 20px; /* Отступ справа */
-        float: left;
-    }
-
-    .aboutMe {
-        width: calc(100% - 340px); /* Ширина AboutMe с учетом отступов */
-        margin-left: auto; /* Выравнивание по правому краю */
-        height: auto; /* Автоматическая высота для AboutMe */
-    }
-
-    .sidemenu .faceImage {
-        width: 175px; /* Уменьшение ширины лица */
-        height: 175px; /* Уменьшение высоты лица */
-        top: -85px; /* Корректировка положения */
-    }
-
-    .sidemenuContainer {
-        padding: 100px 20px 50px;
-    }
-}
-
-
-@media (max-width: 1240px) {
-    .wrapper {
-        max-width: 90%;
     }
 }
 

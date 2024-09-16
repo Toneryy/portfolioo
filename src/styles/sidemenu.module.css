@@ -158,20 +158,26 @@
 
 @media (min-width: 1024px) and (max-width: 1240px) {
     .sidemenu {
-        width: 350px; /* Снижаем ширину бокового меню */
-        height: auto; /* Позволим высоте адаптироваться */
+        width: 300px; /* Уменьшение ширины */
+        float: left;
+        margin-right: 20px;
     }
 
     .sidemenu .faceImage {
-        width: 180px; /* Уменьшаем размер изображения */
-        height: 180px;
-        top: -85px; /* Подстраиваем позицию изображения */
+        width: 175px;
+        height: 175px;
+        top: -85px;
     }
 
     .sidemenuContainer {
-        padding: 120px 25px 60px; /* Адаптируем внутренние отступы */
+        padding: 100px 20px 50px;
+    }
+
+    .downloadResume {
+        width: 100%;
     }
 }
+
 
 
 @media (max-width: 1024px) {
@@ -192,6 +198,10 @@
 }
 
 @media (max-width: 768px) {
+    .sidemenu {
+        margin-top: 50px;
+    }
+
     .sidemenuTitle {
         font-size: 24px;
     }
@@ -222,5 +232,10 @@
     .informationContent {
         padding: 20px;
         gap: 10px;
+    }
+
+    .downloadResume {
+        width: 50%;
+        font-size: clamp(0.5rem, 0.418rem + 1.316vi, 0.75rem);
     }
 }

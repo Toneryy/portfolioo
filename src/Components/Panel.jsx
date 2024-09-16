@@ -1,14 +1,13 @@
+// Panel.jsx
 import React from "react";
-
 import home from '../data/home.png';
 import resume from '../data/resume.png';
 import work from '../data/work.png';
-
 import s from '../styles/panel.module.css';
 
-const Panel = () => {
+const Panel = ({ isOpen }) => {
     return (
-        <section className={s.panel}>
+        <section className={`${s.panel} ${isOpen ? s.open : ''}`}>
             <div className={s.panelContent}>
                 <a href="/home" className={s.panelElement}>
                     <div className={s.panelContainer}>

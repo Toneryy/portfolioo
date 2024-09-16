@@ -112,28 +112,59 @@
 }
 @media (min-width: 1024px) and (max-width: 1240px) {
     .aboutMe {
-        width: calc(100% - 40px); /* Уменьшаем ширину с учетом отступов */
-        margin-left: 0; /* Убираем левый отступ, чтобы использовать все доступное пространство */
-        margin-right: 20px; /* Добавляем небольшой правый отступ для выравнивания */
+        width: calc(100% - 340px); /* Уменьшение ширины с учетом боковой панели */
+        float: right; /* Закрепляем AboutMe справа */
+        margin-left: auto;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .aboutMeContainer {
-        padding: 18px 20px 32px 20px; /* Адаптируем внутренние отступы */
+        padding: 10px 20px 32px 20px; /* Адаптируем внутренние отступы */
     }
 
     .title h1 {
-        font-size: 32px; /* Уменьшаем размер заголовка */
+        font-size: 32px; /* Уменьшение размера заголовка */
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 24px;
     }
 
     .skillsTitle {
-        font-size: 24px; /* Уменьшаем размер заголовка секции навыков */
+        font-size: 26px; /* Уменьшение заголовка секции навыков */
+    }
+
+    .skills {
+        margin-top: 10px;
     }
 
     .gridContainer {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Адаптируем сетку под доступное пространство */
-        gap: 15px; /* Уменьшаем отступы в сетке */
+        grid-template-columns: repeat(2, 1fr); /* Адаптация сетки */
+        gap: 15px; /* Уменьшенные отступы в сетке */
+        margin: 10px;
+        margin-top: 0;
+        grid-auto-rows: minmax(200px, auto); /* Увеличенная минимальная высота строк */
+    }
+
+    .gridItem {
+        padding: 18px;
+        border-radius: 10px;
+        min-height: 150px; /* Увеличенная минимальная высота для элементов только в этом диапазоне */
+    }
+
+    .gridItem h3 {
+        font-size: 16px;
+    }
+
+    .gridItem p {
+        margin-top: 6px;
+        font-size: 10px;
+        line-height: 18px;
     }
 }
+
+
 
 
 
@@ -180,6 +211,19 @@
         grid-template-columns: 1fr; /* Одноколоночная сетка */
         gap: 10px; /* Уменьшенные отступы в сетке */
     }
+
+    .skillsTitle {
+        font-size: 26px;
+    }
+
+    .gridItem h3 {
+        font-size: 24px;
+    }
+
+    .gridItem p {
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -196,7 +240,7 @@
     }
 
     .skillsTitle {
-        font-size: 18px; /* Уменьшенный размер шрифта */
+        font-size: 22px; /* Уменьшенный размер шрифта */
     }
 
     .gridContainer {
@@ -205,6 +249,10 @@
 
     .gridItem {
         padding: 12px; /* Уменьшенный отступ внутри элемента */
+    }
+
+    .gridItem h3 {
+        font-size: 20px;
     }
 
     .gridItem p {

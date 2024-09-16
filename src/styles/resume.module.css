@@ -140,3 +140,145 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* При наведении увеличим тень */
     transform: rotateY(10deg) rotateX(5deg); /* 3D трансформация */
 }
+
+@media (min-width: 1024px) and (max-width: 1240px) {
+    .resume {
+        width: calc(100% - 340px); /* Уменьшение ширины с учетом боковой панели */
+        margin-left: auto;
+    }
+
+    .resumeContainer {
+        padding: 10px 20px;
+    }
+
+    .title h1 {
+        font-size: 32px; /* Уменьшение размера заголовка */
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .skillsTitle {
+        font-size: 24px; /* Уменьшение заголовка секции навыков */
+    }
+
+    .skills {
+        margin-top: 10px;
+    }
+
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr); /* Адаптация сетки */
+        gap: 15px; /* Уменьшенные отступы в сетке */
+        margin: 10px;
+        margin-top: 0;
+        grid-auto-rows: minmax(200px, auto); /* Увеличенная минимальная высота строк */
+    }
+
+    .gridItem {
+        padding: 18px;
+        border-radius: 10px;
+        min-height: 150px; /* Увеличенная минимальная высота для элементов только в этом диапазоне */
+    }
+
+    .gridItem h3 {
+        font-size: 16px;
+    }
+
+    .gridItem p {
+        margin-top: 6px;
+        font-size: 11px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .resume {
+        width: 100%; /* Уменьшенная ширина с учетом отступов */
+        margin: 10px 0;
+        height: auto; /* Высота подстраивается по содержимому */
+    }
+
+    .resumeContainer {
+        padding: 10px;
+    }
+
+    .title h1 {
+        font-size: 32px; /* Уменьшенный размер шрифта */
+    }
+
+    .skillsTitle {
+        font-size: 24px; /* Уменьшенный размер шрифта */
+    }
+
+    .gridContainer {
+        gap: 15px 15px; /* Уменьшенные отступы в сетке */
+    }
+}
+
+@media (max-width: 768px) {
+    .resume {
+        width: 100%; /* Уменьшенная ширина с учетом отступов */
+    }
+
+    .resumeContainer {
+        padding: 18px 10px;
+    }
+
+    .title h1 {
+        font-size: 28px; /* Уменьшенный размер шрифта */
+    }
+
+    .skillsTitle {
+        font-size: 20px; /* Уменьшенный размер шрифта */
+    }
+
+    .gridContainer {
+        grid-template-columns: 1fr; /* Одноколоночная сетка */
+        gap: 10px; /* Уменьшенные отступы в сетке */
+    }
+
+    .gridItem h3 {
+        font-size: 24px;
+    }
+
+    .gridItem p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume {
+        width: 100%; /* Уменьшенная ширина с учетом отступов */
+    }
+
+    .resumeContainer {
+        padding: 18px 5px;
+    }
+
+    .title h1 {
+        font-size: 24px; /* Уменьшенный размер шрифта */
+    }
+
+    .skillsTitle {
+        font-size: 22px; /* Уменьшенный размер шрифта */
+    }
+
+    .gridContainer {
+        gap: 8px; /* Уменьшенные отступы в сетке */
+    }
+
+    .gridItem {
+        padding: 12px; /* Уменьшенный отступ внутри элемента */
+    }
+
+    .gridItem h3 {
+        font-size: 20px;
+    }
+
+    .gridItem p {
+        font-size: 11px;
+    }
+}
