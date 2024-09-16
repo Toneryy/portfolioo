@@ -110,6 +110,33 @@
     letter-spacing: 2.5%;
     margin-top: 10px;
 }
+@media (min-width: 1024px) and (max-width: 1240px) {
+    .aboutMe {
+        width: calc(100% - 40px); /* Уменьшаем ширину с учетом отступов */
+        margin-left: 0; /* Убираем левый отступ, чтобы использовать все доступное пространство */
+        margin-right: 20px; /* Добавляем небольшой правый отступ для выравнивания */
+    }
+
+    .aboutMeContainer {
+        padding: 18px 20px 32px 20px; /* Адаптируем внутренние отступы */
+    }
+
+    .title h1 {
+        font-size: 32px; /* Уменьшаем размер заголовка */
+    }
+
+    .skillsTitle {
+        font-size: 24px; /* Уменьшаем размер заголовка секции навыков */
+    }
+
+    .gridContainer {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Адаптируем сетку под доступное пространство */
+        gap: 15px; /* Уменьшаем отступы в сетке */
+    }
+}
+
+
+
 @media (max-width: 1024px) {
     .aboutMe {
         width: 100%; /* Уменьшенная ширина с учетом отступов */

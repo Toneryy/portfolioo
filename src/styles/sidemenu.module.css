@@ -155,6 +155,25 @@
 }
 
 /* Адаптивные стили */
+
+@media (min-width: 1024px) and (max-width: 1240px) {
+    .sidemenu {
+        width: 350px; /* Снижаем ширину бокового меню */
+        height: auto; /* Позволим высоте адаптироваться */
+    }
+
+    .sidemenu .faceImage {
+        width: 180px; /* Уменьшаем размер изображения */
+        height: 180px;
+        top: -85px; /* Подстраиваем позицию изображения */
+    }
+
+    .sidemenuContainer {
+        padding: 120px 25px 60px; /* Адаптируем внутренние отступы */
+    }
+}
+
+
 @media (max-width: 1024px) {
     .sidemenu {
         width: 100%;

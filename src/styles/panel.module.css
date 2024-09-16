@@ -47,6 +47,24 @@
 }
 
 /* Адаптивные стили */
+
+/* panel.css */
+@media (min-width: 1024px) and (max-width: 1240px) {
+    .panel {
+        width: 320px; /* Уменьшение ширины панели */
+    }
+
+    .panelElement {
+        width: 70px;
+        height: 70px;
+    }
+
+    .panelSubtitle {
+        font-size: 10px;
+    }
+}
+
+
 @media (max-width: 1024px) {
     .panel {
         width: 300px;

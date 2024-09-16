@@ -19,6 +19,48 @@ body {
 
 /* Адаптивные стили */
 
+/* app.module.css */
+@media (min-width: 1024px) and (max-width: 1240px) {
+    .wrapper {
+        max-width: 90%;
+        padding: 0 15px; /* Сохранение отступов внутри wrapper */
+    }
+
+    .sidebar {
+        width: 280px; /* Уменьшение ширины боковой панели */
+        margin-bottom: 20px;
+    }
+
+    .main {
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+
+    .sidemenu {
+        width: 320px; /* Уменьшение ширины SideMenu */
+        height: auto; /* Автоматическая высота для SideMenu */
+        margin-right: 20px; /* Отступ справа */
+        float: left;
+    }
+
+    .aboutMe {
+        width: calc(100% - 340px); /* Ширина AboutMe с учетом отступов */
+        margin-left: auto; /* Выравнивание по правому краю */
+        height: auto; /* Автоматическая высота для AboutMe */
+    }
+
+    .sidemenu .faceImage {
+        width: 175px; /* Уменьшение ширины лица */
+        height: 175px; /* Уменьшение высоты лица */
+        top: -85px; /* Корректировка положения */
+    }
+
+    .sidemenuContainer {
+        padding: 100px 20px 50px;
+    }
+}
+
+
 @media (max-width: 1240px) {
     .wrapper {
         max-width: 90%;
