@@ -58,11 +58,12 @@
 
 .imageContainer {
     width: 100%;
-    height: 150px; /* Примерная высота блока с изображением */
+    height: 150px; /* Фиксированная высота блока */
     border-radius: 10px;
-    margin-bottom: 10px; /* Отступ между изображением и текстом */
+    margin-bottom: 10px;
     overflow: hidden;
-    transition: transform 0.3s ease; /* Переход для анимации */
+    position: relative; /* Контейнер позиционируется относительно родителя */
+    transition: transform 0.3s ease;
 }
 
 .gridItem:hover .imageContainer {
@@ -70,15 +71,19 @@
 }
 
 .imageContainer img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Изображение подстраивается под размер контейнера */
+    position: absolute; /* Абсолютное позиционирование внутри контейнера */
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Заполняем весь контейнер по ширине */
+    height: auto; /* Сохраняем пропорции изображения */
+    transform: translate(-50%, -50%); /* Центрирование изображения */
+    object-fit: cover; /* Сохранение пропорций и заполнение контейнера */
     border-radius: 10px;
-    transition: transform 0.3s ease; /* Переход для анимации */
+    transition: transform 0.3s ease; /* Переход при увеличении */
 }
 
 .gridItem:hover .imageContainer img {
-    transform: scale(1.1); /* Увеличение масштаба изображения при наведении */
+    transform: translate(-50%, -50%) scale(1.1); /* Увеличение изображения при наведении, сохраняя центрирование */
 }
 
 .itemContent {
@@ -170,56 +175,61 @@
 
 @media (max-width: 768px) {
     .portfolio {
-        width: 100%; /* Уменьшенная ширина с учетом отступов */
+        width: 100%; /* Ширина 100% для мобильных */
+        margin: 0 auto; /* Центрирование */
     }
 
     .portfolioContainer {
-        padding: 18px 10px;
+        padding: 10px; /* Уменьшенные отступы */
     }
 
     .title h1 {
-        font-size: 28px; /* Уменьшенный размер шрифта */
+        font-size: 24px; /* Меньший размер шрифта для мобильных */
     }
 
     .container {
-        gap: 10px; /* Уменьшенные отступы в сетке */
+        display: grid; /* Используем грид вместо флекса */
+        grid-template-columns: 1fr; /* Одноколоночная структура */
+        gap: 10px; /* Отступы между элементами */
+        width: 100%; /* Ширина 100% */
+    }
+
+    .gridItem {
+        padding: 15px; /* Уменьшенные паддинги */
+        height: auto; /* Высота подстраивается под контент */
     }
 
     .gridItem h3 {
-        font-size: 20px;
+        font-size: 18px; /* Меньший размер заголовка */
     }
 
     .gridItem p {
-        font-size: 14px;
+        font-size: 14px; /* Меньший размер текста */
     }
 }
 
 @media (max-width: 480px) {
     .portfolio {
-        width: 100%; /* Уменьшенная ширина с учетом отступов */
+        width: 100%;
     }
 
     .portfolioContainer {
-        padding: 18px 5px;
+        padding: 5px;
     }
 
     .title h1 {
-        font-size: 24px; /* Уменьшенный размер шрифта */
-    }
-
-    .container {
-        gap: 8px; /* Уменьшенные отступы в сетке */
+        font-size: 20px; /* Уменьшенный размер шрифта для очень маленьких экранов */
     }
 
     .gridItem {
-        padding: 12px; /* Уменьшенный отступ внутри элемента */
+        padding: 10px; /* Ещё меньше отступы */
     }
 
     .gridItem h3 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .gridItem p {
-        font-size: 11px;
+        font-size: 12px;
     }
 }

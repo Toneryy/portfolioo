@@ -219,66 +219,74 @@
 
 @media (max-width: 768px) {
     .resume {
-        width: 100%; /* Уменьшенная ширина с учетом отступов */
+        width: 100%; /* Ширина 100% для мобильных */
+        margin: 0 auto; /* Центрирование */
     }
 
     .resumeContainer {
-        padding: 18px 10px;
+        padding: 10px; /* Уменьшенные отступы */
     }
 
     .title h1 {
-        font-size: 28px; /* Уменьшенный размер шрифта */
+        font-size: 24px; /* Меньший размер заголовка */
     }
 
-    .skillsTitle {
-        font-size: 20px; /* Уменьшенный размер шрифта */
+    .resumeSections {
+        grid-template-columns: 1fr; /* Одноколоночная структура */
+        gap: 20px; /* Уменьшенные отступы */
     }
 
-    .gridContainer {
-        grid-template-columns: 1fr; /* Одноколоночная сетка */
-        gap: 10px; /* Уменьшенные отступы в сетке */
+    .section {
+        padding: 15px; /* Уменьшенные паддинги */
     }
 
-    .gridItem h3 {
-        font-size: 24px;
-    }
-
-    .gridItem p {
-        font-size: 16px;
-        line-height: 22px;
+    .sectionTitle {
+        font-size: 18px; /* Меньший размер заголовка */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) and (min-width: 650px) {
     .resume {
-        width: 100%; /* Уменьшенная ширина с учетом отступов */
+        margin-top: 10px; /* Добавляем отступ сверху для экрана от 650px до 768px */
+    }
+}
+
+@media (max-width: 650px) {
+    .resumeSections {
+        grid-template-columns: 1fr; /* Устанавливаем одну колонку вместо двух */
+        gap: 20px 0; /* Отступы между секциями */
     }
 
-    .resumeContainer {
-        padding: 18px 5px;
-    }
-
-    .title h1 {
-        font-size: 24px; /* Уменьшенный размер шрифта */
-    }
-
-    .skillsTitle {
-        font-size: 22px; /* Уменьшенный размер шрифта */
-    }
-
-    .gridContainer {
-        gap: 8px; /* Уменьшенные отступы в сетке */
+    .skillsSection {
+        grid-template-columns: 1fr; /* Одноколоночная сетка */
+        gap: 20px; /* Уменьшенные отступы в сетке */
     }
 
     .gridItem {
-        padding: 12px; /* Уменьшенный отступ внутри элемента */
+        width: 100%; /* Ширина 100% для всех элементов грида */
+    }
+}
+
+  
+
+@media (max-width: 480px) {
+    .resume {
+        width: 100%;
     }
 
-    .gridItem h3 {
-        font-size: 20px;
+    .resumeContainer {
+        padding: 5px;
     }
 
-    .gridItem p {
-        font-size: 11px;
+    .title h1 {
+        font-size: 20px; /* Меньший размер шрифта для очень маленьких экранов */
+    }
+
+    .section {
+        padding: 10px; /* Ещё меньше отступы */
+    }
+
+    .sectionTitle {
+        font-size: 16px;
     }
 }
