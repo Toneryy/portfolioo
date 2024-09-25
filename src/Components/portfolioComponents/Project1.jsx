@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import s from '../../styles/portfolio-modules/first.module.css'; 
 
@@ -17,6 +17,18 @@ import eleventh from '../../data/firstProject/eleventh.png';
 const Project1 = () => {
     const images = [first, second, third, fourth, fifth, sixth, seventh, eighth, nineth, tenth, eleventh]; // массив с изображениями
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    // Автоматическая смена изображения
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCurrentImageIndex((prevIndex) =>
+                prevIndex === images.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 3000); // Свитч фотки каждые 3 секунды
+
+        // Очистка интервала при размонтировании компонента
+        return () => clearInterval(intervalId);
+    }, [images.length]);
 
     const handlePrevClick = () => {
         setCurrentImageIndex((prevIndex) =>
@@ -54,7 +66,7 @@ const Project1 = () => {
                         </button>
                     </div>
                     <div className={s.description}>
-                        <p>Это описание проекта рок-группы ID Aho. Здесь можно рассказать о целях, процессе и результатах проекта. Поделитесь интересными моментами и достижениями, связанными с этим проектом.</p>
+                        <p>Это мой проект для местной рок-группы ID Aho. Заказчик, как и сама группа остались довольны:) Стек: JS, HTML&CSS, JS query, backend: Django; DB: PostgresQL</p>
                     </div>
                     <a href="https://github.com/Toneryy/first_order" className={s.githubButton} target="_blank" rel="noopener noreferrer">
                         Перейти на GitHub
@@ -63,6 +75,6 @@ const Project1 = () => {
             </div>
         </section>
     );
-}
+};
 
 export default Project1;

@@ -4,8 +4,8 @@ import s from '../styles/portfolio.module.css';
 
 import first from '../data/first.png';
 import second from '../data/second.jpg';
-import third from '../data/third.jpg';
-import fourth from '../data/fourth.jpg';
+import third from '../data/third.png';
+import fourth from '../data/fourth.png';
 
 const Portfolio = () => {
     return (
@@ -41,7 +41,7 @@ const Portfolio = () => {
                             <img src={third} alt="Adventure Game"/>
                         </div>
                         <div className={s.itemContent}>
-                            <h3>Сайт маркетинговой компании</h3>
+                            <h3>Сайт ресторана</h3>
                             <p>Лэндинг</p>
                         </div>
                     </NavLink>
@@ -51,7 +51,7 @@ const Portfolio = () => {
                             <img src={fourth} alt="Predictive Analytics"/>
                         </div>
                         <div className={s.itemContent}>
-                            <h3>Сайт для управления бюджетом</h3>
+                            <h3>Сайт по продаже телефонов</h3>
                             <p>Веб-приложение</p>
                         </div>
                     </NavLink>

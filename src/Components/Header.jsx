@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import logo from '../data/logo.png';
+import homeLight from '../data/home_light.png';
 import night from '../data/night_theme.png';
 import burgerMenuImg from '../data/burgerMenu_img.png';
 import s from '../styles/header.module.css';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isDarkTheme, setIsDarkTheme] = useState(false); // состояние для темы
 
-    // Функция для переключения состояния меню
     const toggleMenu = () => {
-        console.log('Burger menu clicked');
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const toggleTheme = () => {
+        setIsDarkTheme(!isDarkTheme);
+        document.body.classList.toggle(s.darkTheme, !isDarkTheme); // переключение темы на уровне body
     };
 
     return (
@@ -23,13 +28,12 @@ const Header = () => {
                     <button className={s.burgerButton} onClick={toggleMenu}>
                         <img className={s.burgerMenuImg} src={burgerMenuImg} alt="burger menu" />
                     </button>
-                    <button className={s.themeButton}>
-                        <img className={s.buttonImage} src={night} alt="night theme" />
+                    <button className={s.themeButton} onClick={toggleTheme}>
+                        <img className={s.buttonImage} src={isDarkTheme ? homeLight : night} alt="theme button" />
                     </button>
                 </div>
             </header>
 
-            {/* Меню будет показываться, если isMenuOpen === true */}
             <div className={`${s.burgerMenu} ${isMenuOpen ? s.open : ''}`}>
                 <section className={s.panel}>
                     <div className={s.panelContent}>
@@ -53,6 +57,6 @@ const Header = () => {
             </div>
         </>
     );
-}
+};
 
 export default Header;

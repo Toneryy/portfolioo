@@ -7,7 +7,7 @@ import s from '../styles/panel.module.css';
 
 const Panel = ({ isOpen }) => {
     return (
-        <section className={`${s.panel} ${isOpen ? s.open : ''}`}>
+        <nav className={`${s.panel} ${isOpen ? s.open : ''}`}>
             <div className={s.panelContent}>
                 <a href="/home" className={s.panelElement}>
                     <div className={s.panelContainer}>
@@ -30,7 +30,7 @@ const Panel = ({ isOpen }) => {
                     </div>
                 </a>
             </div>
-        </section>
+        </nav>
     );
 };
 
