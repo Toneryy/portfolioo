@@ -3,19 +3,19 @@ import logo from '../data/logo.png';
 import homeLight from '../data/home_light.png';
 import night from '../data/night_theme.png';
 import burgerMenuImg from '../data/burgerMenu_img.png';
+import { useTheme } from './hooks/use-theme';
 import s from '../styles/header.module.css';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isDarkTheme, setIsDarkTheme] = useState(false); // состояние для темы
+    const { theme, setTheme } = useTheme();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
     const toggleTheme = () => {
-        setIsDarkTheme(!isDarkTheme);
-        document.body.classList.toggle(s.darkTheme, !isDarkTheme); // переключение темы на уровне body
+        setTheme(theme === 'light' ? 'dark' : 'light');
     };
 
     return (
@@ -23,13 +23,13 @@ const Header = () => {
             <header>
                 <div className={s.header_line}>
                     <a href="/home" className={s.logo}>
-                        <img src={logo} alt="logo"/>
+                        <img src={logo} alt="logo" />
                     </a>
                     <button className={s.burgerButton} onClick={toggleMenu}>
                         <img className={s.burgerMenuImg} src={burgerMenuImg} alt="burger menu" />
                     </button>
                     <button className={s.themeButton} onClick={toggleTheme}>
-                        <img className={s.buttonImage} src={isDarkTheme ? homeLight : night} alt="theme button" />
+                        <img className={s.buttonImage} src={theme === 'light' ? homeLight : night} alt="theme button" />
                     </button>
                 </div>
             </header>
